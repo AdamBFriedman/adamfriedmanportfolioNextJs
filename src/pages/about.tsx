@@ -1,4 +1,5 @@
 import ProfileCard from "@/components/ProfileCard";
+import Skills from "@/components/Skills";
 
 const About = () => {
   return (
@@ -6,7 +7,9 @@ const About = () => {
       <div className="boxWrapper">
         <ProfileCard />
       </div>
-      <div className="boxWrapper"></div>
+      <div className="boxWrapper">
+        <Skills />
+      </div>
     </div>
   );
 };
