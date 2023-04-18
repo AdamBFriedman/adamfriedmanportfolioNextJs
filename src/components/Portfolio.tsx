@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { RootState } from "@/store/store";
 import { useSelector } from "react-redux";
+import ProjectCard from "./ProjectCard";
 // import Card from "./Card";
 // import FilterButtons from "./FilterButtons";
 
@@ -104,7 +105,7 @@ const Portfolio = () => {
         href: "https://chucknorrisfacts.netlify.app/",
       },
       {
-        imageType: ".jpg",
+        imageType: ".png",
         filter: "react",
         title: "8 Bit Art",
         imageID: "15",
@@ -247,13 +248,12 @@ const Portfolio = () => {
         })
         .map((project, index) => (
           <div key={index} className={"projectCardWrapper"}>
-            <h1>{project.title}</h1>
-            {/* <Card
+            <ProjectCard
               filter={["card", "filter", project.filter].join(" ")}
               title={project.title}
-              src={require(`../img/projects/project${project.imageID}${project.imageType}`)}
+              src={require(`../images/projects/project${project.imageID}${project.imageType}`)}
               href={project.href}
-            /> */}
+            />
           </div>
         ))}
     </div>

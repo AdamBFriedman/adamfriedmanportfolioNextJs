@@ -5,7 +5,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 import Link from "next/link";
 
-const ProfileCard = () => {
+const Profile = () => {
   const isDarkMode = useSelector(
     (state: RootState) => state.isDarkMode.isDarkMode
   );
@@ -72,4 +72,4 @@ const ProfileCard = () => {
   );
 };
 
-export default ProfileCard;
+export default Profile;

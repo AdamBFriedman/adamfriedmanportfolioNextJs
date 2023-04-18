@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import ProfileCard from "@/components/ProfileCard";
+import Profile from "@/components/Profile";
 import Skills from "@/components/Skills";
 import { RootState } from "@/store/store";
 import { useSelector } from "react-redux";
@@ -19,7 +19,7 @@ const About = () => {
         }
       >
         <div className="boxWrapper">
-          <ProfileCard />
+          <Profile />
         </div>
         <div className="boxWrapper">
           <Skills />
