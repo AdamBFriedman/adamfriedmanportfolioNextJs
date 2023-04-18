@@ -443,11 +443,8 @@ $chartBarGap: 10px;
 .lineDark {
   height: inherit;
   width: 2px;
-
   position: absolute;
-
-  background: rgba(#eee, 0.6);
-
+  background: rgba(#292b2c, 0.6);
   &.l--0 {
     left: 0;
   }
@@ -468,11 +465,8 @@ $chartBarGap: 10px;
 .lineLight {
   height: inherit;
   width: 2px;
-
   position: absolute;
-
-  background: rgba(#292b2c, 0.6);
-
+  background: rgba(#eee, 0.6);
   &.l--0 {
     left: 0;
   }
@@ -491,6 +485,7 @@ $chartBarGap: 10px;
 }
 
 .line__label {
+  color: white;
   display: block;
   width: 100px;
   text-align: center;
@@ -506,7 +501,7 @@ $chartBarGap: 10px;
 }
 
 .line__labelDark {
-  color: white;
+  color: black;
   display: block;
   width: 100px;
   text-align: center;
@@ -539,13 +534,10 @@ $chartBarGap: 10px;
 .chart__title {
   display: block;
   margin: 0 0 10px 10px;
-
+  color: white;
   font-weight: bold;
-
   opacity: 0;
-
   animation: 1s anim-lightspeed-in ease forwards;
-
   .chart--prod & {
     animation-delay: 3.3s;
   }
@@ -555,7 +547,6 @@ $chartBarGap: 10px;
 }
 
 .chart__titleDark {
-  color: white;
   display: block;
   margin: 0 0 10px 10px;
 
