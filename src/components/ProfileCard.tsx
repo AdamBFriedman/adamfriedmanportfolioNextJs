@@ -1,9 +1,20 @@
+import type { RootState } from "@/store/store";
+import { useSelector } from "react-redux";
+
 const profileCard = () => {
+  const isDarkMode = useSelector(
+    (state: RootState) => state.isDarkMode.isDarkMode
+  );
+
   return (
     <div className="profileContainer">
       <div className="profileWrapper">
         <div className="profilePanel">
-          <div className="profileRing">
+          <div
+            className={
+              isDarkMode ? "profileRing profileRingDark" : "profileRing"
+            }
+          >
             <div className="profileCard"></div>
             <div className="profileBorder">
               <div className="profileSlide">

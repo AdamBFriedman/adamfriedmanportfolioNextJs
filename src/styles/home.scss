@@ -722,14 +722,21 @@ $chartBarGap: 10px;
 }
 
 .profileRing:before {
-  border-color: rgb(235, 235, 235) rgb(235, 235, 235) rgba(0, 0, 0, 0)
-    rgba(0, 0, 0, 0);
+  border-color: #195190ff #195190ff rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
   z-index: -1;
 }
 
 .profileRing:after {
-  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgb(235, 235, 235)
-    rgb(235, 235, 235);
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #195190ff #195190ff;
+}
+
+.profileRingDark:before {
+  border-color: #91c9ff #91c9ff rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  z-index: -1;
+}
+
+.profileRingDark:after {
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #91c9ff #91c9ff;
 }
 
 .profileTitle {
