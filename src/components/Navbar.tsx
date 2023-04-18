@@ -99,24 +99,15 @@ const Navbar = () => {
               <span>c</span>
               <span>t</span>
             </Link>
-            <div onClick={setMode} className={"off  ui-draggable lightbulb"}>
-              <div className={"lightBulb2"} style={{ opacity: 1 }}></div>
-            </div>
-            {/* {dark ? (
-      <div
-        onClick={onClick}
-        className={["off", "ui-draggable", classes.lightbulb].join(" ")}
-      >
-        <div className={classes.lightBulb2} style={{ opacity: 0 }}></div>
-      </div>
-    ) : (
-      <div
-        onClick={onClick}
-        className={["off", "ui-draggable", classes.lightbulb].join(" ")}
-      >
-        <div className={classes.lightBulb2} style={{ opacity: 1 }}></div>
-      </div>
-    )} */}
+            {isDarkMode ? (
+              <div onClick={setMode} className={"off  ui-draggable lightbulb"}>
+                <div className={"lightBulb2"} style={{ opacity: 0 }}></div>
+              </div>
+            ) : (
+              <div onClick={setMode} className={"off  ui-draggable lightbulb"}>
+                <div className={"lightBulb2"} style={{ opacity: 1 }}></div>
+              </div>
+            )}
           </>
         )}
       </Toolbar>
