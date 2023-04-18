@@ -364,11 +364,11 @@ $surfaces: $walls * 2;
   // }
 }
 
-.aboutWrapperLight {
+.aboutWrapperDark {
   background: linear-gradient(120deg, #7e7f80 50%, #292b2c 50%);
 }
 
-.aboutWrapperDark {
+.aboutWrapperLight {
   background: linear-gradient(120deg, #fff 50%, #7e7f80 50%);
 }
 
@@ -440,7 +440,7 @@ $chartBarGap: 10px;
   list-style: none;
 }
 
-.lineDark {
+.lineLight {
   height: inherit;
   width: 2px;
   position: absolute;
@@ -462,7 +462,7 @@ $chartBarGap: 10px;
   }
 }
 
-.lineLight {
+.lineDark {
   height: inherit;
   width: 2px;
   position: absolute;
@@ -484,7 +484,7 @@ $chartBarGap: 10px;
   }
 }
 
-.line__label {
+.line__labelDark {
   color: white;
   display: block;
   width: 100px;
@@ -500,7 +500,7 @@ $chartBarGap: 10px;
   }
 }
 
-.line__labelDark {
+.line__label {
   color: black;
   display: block;
   width: 100px;
@@ -531,7 +531,7 @@ $chartBarGap: 10px;
   }
 }
 
-.chart__title {
+.chart__titleDark {
   display: block;
   margin: 0 0 10px 10px;
   color: white;
@@ -546,7 +546,7 @@ $chartBarGap: 10px;
   }
 }
 
-.chart__titleDark {
+.chart__title {
   display: block;
   margin: 0 0 10px 10px;
 
@@ -568,7 +568,7 @@ $chartBarGap: 10px;
   overflow: hidden;
 }
 
-.chart__bar {
+.chart__barDark {
   $border-rad: 4px;
   height: $chartBarHeight;
   margin-bottom: $chartBarGap;
@@ -591,7 +591,7 @@ $chartBarGap: 10px;
   }
 }
 
-.chart__barDark {
+.chart__bar {
   $border-rad: 4px;
   height: $chartBarHeight;
   margin-bottom: $chartBarGap;
@@ -651,15 +651,6 @@ $chartBarGap: 10px;
     .profileCard {
       filter: blur(1.5px);
     }
-    .profileCard1 {
-      background-size: 215% 135%;
-    }
-    .profileCard2 {
-      background-size: 115% 115%;
-    }
-    .profileCard3 {
-      background-size: 155% 115%;
-    }
     .profileTitle {
       color: rgba(255, 255, 255, 0.2);
     }
@@ -700,10 +691,14 @@ $chartBarGap: 10px;
   transition: all 1s;
   height: 60vh;
   width: 30vw;
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid #91c9ff;
   background-image: url("../images/profilePic.jpg");
   background-position: top;
   background-repeat: no-repeat;
+}
+
+.profileCardDark {
+  border: 1px solid #195190ff;
 }
 
 .profileRing:before,
@@ -722,21 +717,21 @@ $chartBarGap: 10px;
 }
 
 .profileRing:before {
-  border-color: #195190ff #195190ff rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
-  z-index: -1;
-}
-
-.profileRing:after {
-  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #195190ff #195190ff;
-}
-
-.profileRingDark:before {
   border-color: #91c9ff #91c9ff rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
   z-index: -1;
 }
 
-.profileRingDark:after {
+.profileRing:after {
   border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #91c9ff #91c9ff;
+}
+
+.profileRingDark:before {
+  border-color: #195190ff #195190ff rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  z-index: -1;
+}
+
+.profileRingDark:after {
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #195190ff #195190ff;
 }
 
 .profileTitle {
@@ -760,7 +755,16 @@ $chartBarGap: 10px;
 
 .profileBorder {
   position: absolute;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid #91c9ff;
+  height: 90%;
+  width: 90%;
+  transition: border 1s;
+  overflow: hidden;
+}
+
+.profileBorderDark {
+  position: absolute;
+  border: 1px solid #195190ff;
   height: 90%;
   width: 90%;
   transition: border 1s;

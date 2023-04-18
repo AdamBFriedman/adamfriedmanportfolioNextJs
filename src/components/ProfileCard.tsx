@@ -1,7 +1,7 @@
 import type { RootState } from "@/store/store";
 import { useSelector } from "react-redux";
 
-const profileCard = () => {
+const ProfileCard = () => {
   const isDarkMode = useSelector(
     (state: RootState) => state.isDarkMode.isDarkMode
   );
@@ -15,8 +15,16 @@ const profileCard = () => {
               isDarkMode ? "profileRing profileRingDark" : "profileRing"
             }
           >
-            <div className="profileCard"></div>
-            <div className="profileBorder">
+            <div
+              className={
+                isDarkMode ? "profileCard profileCardDark" : "profileCard"
+              }
+            ></div>
+            <div
+              className={
+                isDarkMode ? "profileBorder profileBorderDark" : "profileBorder"
+              }
+            >
               <div className="profileSlide">
                 <h6 className="profilePara">Info</h6>
                 <div className="profileLine">
@@ -38,4 +46,4 @@ const profileCard = () => {
   );
 };
 
-export default profileCard;
+export default ProfileCard;

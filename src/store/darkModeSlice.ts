@@ -5,7 +5,7 @@ export const selectDarkModeReducerState = (state: any) => state.isDarkMode;
 export const darkModeSlice = createSlice({
   name: "darkMode",
   initialState: {
-    isDarkMode: false,
+    isDarkMode: true,
   },
   reducers: {
     setDarkMode: (state) => {
