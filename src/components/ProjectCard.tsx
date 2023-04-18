@@ -15,7 +15,7 @@ const ProjectCard = (props: ProjectCardProps) => {
       <a href={href} target="_blank" rel="noopener noreferrer">
         <figure className={filter}>
           <Image className={"projectImage"} src={src} alt={title} />
-          <figcaption>
+          <figcaption className={"projectTitle"}>
             <h3>{title}</h3>
           </figcaption>
           <div className="hover">{title}</div>
