@@ -8,8 +8,9 @@ const Navbar = () => {
   const isMobileOrSmaller = false;
 
   const handleClick = () => alert("click");
+  const onClick = () => alert("onClick");
   return (
-    <AppBar position="static" className={"appBar"}>
+    <AppBar position="static" className={"navBar"}>
       <Toolbar className={"toolBar"}>
         {isMobileOrSmaller ? (
           <IconButton
@@ -91,6 +92,9 @@ const Navbar = () => {
               <span>c</span>
               <span>t</span>
             </Link>
+            <div onClick={onClick} className={"off  ui-draggable lightbulb"}>
+              <div className={"lightBulb2"} style={{ opacity: 1 }}></div>
+            </div>
             {/* {dark ? (
       <div
         onClick={onClick}
