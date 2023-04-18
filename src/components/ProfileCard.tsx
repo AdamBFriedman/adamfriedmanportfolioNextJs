@@ -1,5 +1,9 @@
 import type { RootState } from "@/store/store";
 import { useSelector } from "react-redux";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import EmailIcon from "@mui/icons-material/Email";
+import Link from "next/link";
 
 const ProfileCard = () => {
   const isDarkMode = useSelector(
@@ -26,16 +30,38 @@ const ProfileCard = () => {
               }
             >
               <div className="profileSlide">
-                <h6 className="profilePara">Info</h6>
-                <div className="profileLine">
-                  <h6 className="profilePara">Portfolio</h6>{" "}
-                  <i className="fa fa-plane" aria-hidden="true"></i>
-                  <h6 className="profilePara">LinkedIn</h6>
+                <div className={"profilePara"}>
+                  <h2 className={"infoHeader"}>Adam Friedman</h2>
+                  <span className={"infoSubHeader"}>
+                    Solution Architect{" "}
+                    <span className={"infoLocation"}>Austin, TX</span>
+                  </span>
                 </div>
-                <div className="profileLine">
-                  <h6 className="profilePara">GitHub</h6>{" "}
-                  <i className="fa fa-plane" aria-hidden="true"></i>
-                  <h6 className="profilePara">GitLab</h6>
+                <div className={"profileLinksWrapper"}>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/adam-friedman5/"
+                    className="profileLink linkedIn"
+                  >
+                    <LinkedInIcon />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.github.com/AdamBFriedman"
+                    className="profileLink github"
+                  >
+                    <GitHubIcon />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="mailto:adam.friedman5@gmail.com?subject=Let's chat!&body=Hi Adam..."
+                    className="profileLink gmail"
+                  >
+                    <EmailIcon />
+                  </a>
                 </div>
               </div>
             </div>

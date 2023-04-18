@@ -670,10 +670,56 @@ $chartBarGap: 10px;
 .profileCard,
 .profileBorder,
 .profileSlide,
-.profileLine {
+.profileLink {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.profileLink {
+  text-align: center;
+  display: block;
+  height: 50px;
+  width: 50px;
+  color: white;
+  fill: white;
+  background: #195190ff;
+  border-radius: 50%;
+  line-height: 60px;
+  font-size: 20px;
+  z-index: 1;
+  //   opacity: 0;
+  //   transform: translateY(200px);
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.profileLink:hover {
+  background: #91c9ff;
+}
+
+.linkedIn {
+  transition: 0.5s;
+  background: #0077b5;
+}
+.linkedIn:hover {
+  background: #fff;
+  color: #0077b5;
+}
+.github {
+  transition: 0.5s;
+  background: #211f1f;
+}
+.github:hover {
+  background: #fff;
+  color: #211f1f;
+}
+.gmail {
+  transition: 0.5s;
+  background: #bb001b;
+}
+.gmail:hover {
+  background: #fff;
+  color: #bb001b;
 }
 
 .profileRing {
@@ -782,8 +828,25 @@ $chartBarGap: 10px;
   flex-direction: column;
 }
 
+.profileLinksWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
 .fa-plane {
   font-size: 16px;
+}
+
+.infoHeader {
+  font-size: 27px;
+  margin: 3px 0;
+}
+.infoSubheader {
+  color: #1a1a1a;
+}
+.infoLocation {
+  margin-left: 24px;
 }
 
 //Keyframes

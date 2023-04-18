@@ -32,30 +32,14 @@ const Navbar = () => {
           </IconButton>
         ) : (
           <>
-            <Link
-              href="/"
-              className={"hover-shadow navLink"}
-              //   {
-              //     dark
-              //       ? ["hover-shadowDark", classes.link].join(" ")
-              //       : ["hover-shadow", classes.link].join(" ")
-              //   }
-            >
+            <Link href="/" className={"hover-shadow navLink"}>
               <span>H</span>
               <span>o</span>
               <span>m</span>
               <span>e</span>
             </Link>
 
-            <Link
-              className={"hover-shadow navLink"}
-              //   {
-              //     dark
-              //       ? ["hover-shadowDark", classes.link].join(" ")
-              //       : ["hover-shadow", classes.link].join(" ")
-              //   }
-              href="/about"
-            >
+            <Link className={"hover-shadow navLink"} href="/about">
               <span>A</span>
               <span>b</span>
               <span>o</span>
@@ -63,15 +47,7 @@ const Navbar = () => {
               <span>t</span>
             </Link>
 
-            <Link
-              className={"hover-shadow navLink"}
-              //   {
-              //     dark
-              //       ? ["hover-shadowDark", classes.link].join(" ")
-              //       : ["hover-shadow", classes.link].join(" ")
-              //   }
-              href="/projects"
-            >
+            <Link className={"hover-shadow navLink"} href="/projects">
               <span>P</span>
               <span>r</span>
               <span>o</span>
@@ -82,15 +58,7 @@ const Navbar = () => {
               <span>s</span>
             </Link>
 
-            <Link
-              className={"hover-shadow navLink"}
-              //   {
-              //     dark
-              //       ? ["hover-shadowDark", classes.link].join(" ")
-              //       : ["hover-shadow", classes.link].join(" ")
-              //   }
-              href="/contact"
-            >
+            <Link className={"hover-shadow navLink"} href="/contact">
               <span>C</span>
               <span>o</span>
               <span>n</span>
