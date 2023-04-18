@@ -2,13 +2,20 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Link from "next/link";
+import type { RootState } from "@/store/store";
+import { useSelector, useDispatch } from "react-redux";
+import { setDarkMode, setLightMode } from "@/store/darkModeSlice";
 // import MenuIcon from "@material-ui/icons/Menu";
 
 const Navbar = () => {
   const isMobileOrSmaller = false;
-
+  const isDarkMode = useSelector(
+    (state: RootState) => state.isDarkMode.isDarkMode
+  );
+  const dispatch = useDispatch();
   const handleClick = () => alert("click");
-  const onClick = () => alert("onClick");
+  const setMode = () =>
+    isDarkMode ? dispatch(setLightMode()) : dispatch(setDarkMode());
   return (
     <AppBar position="static" className={"navBar"}>
       <Toolbar className={"toolBar"}>
@@ -92,7 +99,7 @@ const Navbar = () => {
               <span>c</span>
               <span>t</span>
             </Link>
-            <div onClick={onClick} className={"off  ui-draggable lightbulb"}>
+            <div onClick={setMode} className={"off  ui-draggable lightbulb"}>
               <div className={"lightBulb2"} style={{ opacity: 1 }}></div>
             </div>
             {/* {dark ? (
