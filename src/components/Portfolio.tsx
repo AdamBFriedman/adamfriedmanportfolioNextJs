@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { RootState } from "@/store/store";
 import { useSelector } from "react-redux";
 import ProjectCard from "./ProjectCard";
+import FilterButtons from "./FilterButtons";
 // import Card from "./Card";
 // import FilterButtons from "./FilterButtons";
 
@@ -229,9 +230,9 @@ const Portfolio = () => {
 
   return (
     <div className={"portfolioCardWrapper"}>
-      {/* <div className={"filterButtonWrapper"}>
-        <FilterButtons setFilter={handleFilter} dark={isDarkMode} />
-      </div> */}
+      <div className={"filterButtonWrapper"}>
+        <FilterButtons setFilter={handleFilter} isDarkMode={isDarkMode} />
+      </div>
       {projectData()
         .filter((project) => {
           return filter === "all"

@@ -851,9 +851,6 @@ $chartBarGap: 10px;
 
 // Projects
 .projectsWrapperDark {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   background: linear-gradient(120deg, #7e7f80 50%, #292b2c 50%);
 }
@@ -945,6 +942,69 @@ $chartBarGap: 10px;
 .card:hover figcaption,
 .card.hover figcaption {
   opacity: 0;
+}
+
+// Filter Buttons
+.filterButtonWrapper {
+  margin: 0;
+}
+.filterButtons {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+.buttonDefault:active {
+  background-color: #195190ff;
+  color: white;
+  padding: 2em;
+}
+.filterButton {
+  transition: 0.5s;
+  cursor: pointer;
+  // [theme.breakpoints.down('xs')]: {
+  //   marginBottom: theme.spacing(1)
+  // }
+}
+.filterButton:active {
+  background-color: #195190ff;
+  color: white;
+  padding: 2em;
+}
+.filterButtonDark {
+  font-size: 18px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  margin-right: 0.5em;
+  padding: 1em;
+  background: transparent;
+  width: 180px;
+  height: 60px;
+}
+.filterButtonDark:hover {
+  border: 1px solid #195190ff;
+  background: #195190ff;
+}
+.filterButtonLight {
+  font-size: 18px;
+  border: 1px solid #195190ff;
+  border-radius: 5px;
+  text-align: center;
+  color: #195190ff;
+  margin-right: 0.5em;
+  padding: 1em;
+  background: transparent;
+  width: 180px;
+  height: 60px;
+}
+.filterButtonLight:hover {
+  border: 1px solid #195190ff;
+  background: #195190ff;
+  color: #fff;
 }
 
 // Portfolio
