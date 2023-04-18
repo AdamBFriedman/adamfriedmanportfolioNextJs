@@ -1,10 +1,16 @@
 import Navbar from "@/components/Navbar";
+import Portfolio from "@/components/Portfolio";
 
 const Projects = () => {
+  const isDarkMode = true;
   return (
     <>
       <Navbar />
-      <h1>Projects</h1>
+      <div
+        className={isDarkMode ? "projectsWrapperDark" : "projectsWrapperLight"}
+      >
+        <Portfolio />
+      </div>
     </>
   );
 };
