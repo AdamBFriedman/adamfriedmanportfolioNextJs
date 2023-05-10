@@ -33,39 +33,27 @@ const Navbar = () => {
         ) : (
           <>
             <Link href="/" className={"hover-shadow navLink"}>
-              <span>H</span>
-              <span>o</span>
-              <span>m</span>
-              <span>e</span>
+              {"Home".split("").map((letter, index) => (
+                <span key={index}>{letter}</span>
+              ))}
             </Link>
 
             <Link className={"hover-shadow navLink"} href="/about">
-              <span>A</span>
-              <span>b</span>
-              <span>o</span>
-              <span>u</span>
-              <span>t</span>
+              {"About".split("").map((letter, index) => (
+                <span key={index}>{letter}</span>
+              ))}
             </Link>
 
             <Link className={"hover-shadow navLink"} href="/projects">
-              <span>P</span>
-              <span>r</span>
-              <span>o</span>
-              <span>j</span>
-              <span>e</span>
-              <span>c</span>
-              <span>t</span>
-              <span>s</span>
+              {"Projects".split("").map((letter, index) => (
+                <span key={index}>{letter}</span>
+              ))}
             </Link>
 
             <Link className={"hover-shadow navLink"} href="/contact">
-              <span>C</span>
-              <span>o</span>
-              <span>n</span>
-              <span>t</span>
-              <span>a</span>
-              <span>c</span>
-              <span>t</span>
+              {"Contact".split("").map((letter, index) => (
+                <span key={index}>{letter}</span>
+              ))}
             </Link>
             {isDarkMode ? (
               <div onClick={setMode} className={"off  ui-draggable lightbulb"}>
