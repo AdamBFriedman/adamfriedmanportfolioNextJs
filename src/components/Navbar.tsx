@@ -17,7 +17,10 @@ const Navbar = () => {
   const setMode = () =>
     isDarkMode ? dispatch(setLightMode()) : dispatch(setDarkMode());
   return (
-    <AppBar position="static" className={"navBar"}>
+    <AppBar
+      position="static"
+      className={isDarkMode ? "navBar navBarDark" : "navBar"}
+    >
       <Toolbar className={"toolBar"}>
         {isMobileOrSmaller ? (
           <IconButton

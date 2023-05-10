@@ -45,8 +45,11 @@ $surfaces: $walls * 2;
   justify-content: space-between;
   align-items: center;
   color: white;
-  background: #292b2c;
+  background: #7e7f80;
   height: 10vh;
+}
+.navBarDark {
+  background: #292b2c;
 }
 .toolBar {
   display: flex;
