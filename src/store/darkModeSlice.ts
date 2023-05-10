@@ -9,11 +9,9 @@ export const darkModeSlice = createSlice({
   },
   reducers: {
     setDarkMode: (state) => {
-      console.log("dark mode running");
       state.isDarkMode = true;
     },
     setLightMode: (state) => {
-      console.log("light mode running");
       state.isDarkMode = false;
     },
   },
