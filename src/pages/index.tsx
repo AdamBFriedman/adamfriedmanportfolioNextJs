@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div className="homeWrapper">
       <Link href="/about">
-        <div className="container">
+        <div className="homeContainer">
           <div className="wall">
             <div className="surface"></div>
             <div className="surface"></div>
