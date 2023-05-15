@@ -242,3 +242,15 @@ $chartBarGap: 10px;
 .skills {
   transform: scale(0.75);
 }
+
+//Keyframes
+@keyframes anim-lightspeed-in {
+  0% {
+    transform: translateX(-200%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
