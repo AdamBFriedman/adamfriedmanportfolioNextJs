@@ -254,3 +254,17 @@ $chartBarGap: 10px;
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .skills {
+    height: 100vh;
+  }
+
+  .lines {
+    font-size: 1.5em;
+  }
+
+  .charts {
+    font-size: 1.5em;
+  }
+}
