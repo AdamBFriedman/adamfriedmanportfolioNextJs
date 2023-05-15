@@ -1,10 +1,11 @@
 import Navbar from "@/components/Navbar";
+import ContactPage from "../components/Contact";
 
 const Contact = () => {
   return (
     <>
       <Navbar />
-      <h1>Contact</h1>
+      <ContactPage />
     </>
   );
 };
