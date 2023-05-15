@@ -6,13 +6,18 @@ import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
 import { useDispatch, useSelector } from "react-redux";
 import { setMobileMenuClose } from "@/store/mobileMenu/mobileMenuSlice";
+import { setDarkMode, setLightMode } from "@/store/darkMode/darkModeSlice";
 
 export const Sidebar = () => {
   const theme = useTheme();
   const dispatch = useDispatch();
+  const isDarkMode = useSelector((state: any) => state.isDarkMode.isDarkMode);
   const isMobileMenuOpen = useSelector(
     (state: any) => state.isMobileMenuOpen.isMobileMenuOpen
   );
+
+  const setMode = () =>
+    isDarkMode ? dispatch(setLightMode()) : dispatch(setDarkMode());
 
   return (
     <Drawer
@@ -45,21 +50,25 @@ export const Sidebar = () => {
           <List className={"menuItem"}>Contact</List>
         </Link>
         <Divider className={"divider"} />
-        {/* {dark ? (
-          <div
-            onClick={onClick}
-            className={["off", "ui-draggable", "lightbulb"].join(" ")}
-          >
-            <div className={"lightBulb2"} style={{ opacity: 0 }}></div>
+        {isDarkMode ? (
+          <div className={"sideBarLightbulbWrapper"}>
+            <div
+              onClick={setMode}
+              className={["off", "ui-draggable", "sideBarLightbulb"].join(" ")}
+            >
+              <div className={"sideBarLightBulb2"} style={{ opacity: 0 }}></div>
+            </div>
           </div>
         ) : (
-          <div
-            onClick={onClick}
-            className={["off", "ui-draggable", "lightbulb"].join(" ")}
-          >
-            <div className={"lightBulb2"} style={{ opacity: 1 }}></div>
+          <div className={"sideBarLightbulbWrapper"}>
+            <div
+              onClick={setMode}
+              className={["off", "ui-draggable", "sideBarLightbulb"].join(" ")}
+            >
+              <div className={"sideBarLightBulb2"} style={{ opacity: 1 }}></div>
+            </div>
           </div>
-        )} */}
+        )}
       </div>
     </Drawer>
   );

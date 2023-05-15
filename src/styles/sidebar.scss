@@ -32,18 +32,23 @@
   color: #fff !important;
   background: #fff !important;
 }
-.lightbulb {
+.sideBarLightbulbWrapper {
+  display: flex;
+  justify-content: center;
+}
+.sideBarLightbulb {
   width: 150px;
   height: 150px;
   background: url("https://lh4.googleusercontent.com/-katLGTSCm2Q/UJC0_N7XCrI/AAAAAAAABq0/6GxNfNW-Ra4/s300/lightbulb.png")
     no-repeat -150px 0;
   cursor: pointer;
-  z-index: 800;
-  display: flex;
-  justify-content: center;
-  transform: translateX(-12%);
+  // z-index: 800;
+  // display: flex;
+  // justify-content: center;
+  // width: 100%;
+  transform: scale(0.75);
 }
-.lightBulb2 {
+.sideBarLightBulb2 {
   width: 150px;
   height: 150px;
   background: url("https://lh4.googleusercontent.com/-katLGTSCm2Q/UJC0_N7XCrI/AAAAAAAABq0/6GxNfNW-Ra4/s300/lightbulb.png")

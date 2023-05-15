@@ -25,24 +25,22 @@ const Navbar = () => {
     (state: any) => state.isMobileMenuOpen.isMobileMenuOpen
   );
   const dispatch = useDispatch();
-  const handleClick = () => alert("click");
   const setMode = () =>
     isDarkMode ? dispatch(setLightMode()) : dispatch(setDarkMode());
   return (
     <AppBar
       position="static"
-      className={isDarkMode ? "navBar navBarDark" : "navBar"}
+      className={isDarkMode ? "navbar navbarDark" : "navbar"}
     >
       <Toolbar className={"toolBar"}>
         {isMobileOrSmaller ? (
           <IconButton
             className={"iconButton"}
             onClick={() => dispatch(setMobileMenuOpen())}
-            edge="start"
             color="inherit"
             aria-label="menu"
           >
-            <MenuIcon />
+            <MenuIcon className="navbarMenuIcon" />
           </IconButton>
         ) : (
           <>

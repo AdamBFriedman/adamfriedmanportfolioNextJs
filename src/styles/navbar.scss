@@ -1,4 +1,4 @@
-.navBar {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6,8 +6,12 @@
   background: #7e7f80 !important;
   height: 10vh;
 }
-.navBarDark {
+.navbarDark {
   background: #292b2c !important;
+}
+.navbarMenuIcon {
+  width: 35px;
+  height: 35px;
 }
 .toolBar {
   display: flex;
@@ -99,4 +103,13 @@
   height: 150px;
   background: url("https://lh4.googleusercontent.com/-katLGTSCm2Q/UJC0_N7XCrI/AAAAAAAABq0/6GxNfNW-Ra4/s300/lightbulb.png")
     no-repeat 0 0;
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto 0;
+  transform: translateY(0.5em);
 }
