@@ -1,0 +1,25 @@
+.aboutWrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  // [theme.breakpoints.down(sm)]: {
+  //   flexDirection: column;
+  //   height: 100%;
+  // }
+}
+
+.aboutWrapperDark {
+  background: linear-gradient(120deg, #7e7f80 50%, #292b2c 50%);
+}
+
+.aboutWrapperLight {
+  background: linear-gradient(120deg, #fff 50%, #7e7f80 50%);
+}
+
+.boxWrapper {
+  width: 50vw;
+  // [theme.breakpoints.down(sm)]: {
+  //   width: 100vw;
+  // }
+}
