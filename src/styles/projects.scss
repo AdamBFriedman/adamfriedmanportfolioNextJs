@@ -194,4 +194,12 @@
   .filterButton {
     margin-bottom: 8px;
   }
+
+  .projectsWrapperDark {
+    background: linear-gradient(90deg, #7e7f80 50%, #292b2c 50%);
+  }
+
+  .projectsWrapperLight {
+    background: linear-gradient(90deg, #fff 50%, #7e7f80 50%);
+  }
 }
