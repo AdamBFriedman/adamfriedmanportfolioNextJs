@@ -3,10 +3,6 @@
   justify-content: space-around;
   align-items: center;
   height: 100vh;
-  // [theme.breakpoints.down(sm)]: {
-  //   flexDirection: column;
-  //   height: 100%;
-  // }
 }
 
 .aboutWrapperDark {
@@ -19,7 +15,15 @@
 
 .boxWrapper {
   width: 50vw;
-  // [theme.breakpoints.down(sm)]: {
-  //   width: 100vw;
-  // }
+}
+
+@media screen and (max-width: 600px) {
+  .aboutWrapper {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .boxWrapper {
+    width: 100vw;
+  }
 }

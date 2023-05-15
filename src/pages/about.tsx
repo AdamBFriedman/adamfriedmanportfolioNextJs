@@ -1,12 +1,11 @@
-import Navbar from "@/components/Navbar";
+import Navbar, { isDarkModeStore } from "@/components/Navbar";
 import Profile from "@/components/Profile";
 import Skills from "@/components/Skills";
-import { RootState } from "@/store/store";
 import { useSelector } from "react-redux";
 
 const About = () => {
   const isDarkMode = useSelector(
-    (state: RootState) => state.isDarkMode.isDarkMode
+    (state: isDarkModeStore) => state.isDarkMode.isDarkMode
   );
   return (
     <>

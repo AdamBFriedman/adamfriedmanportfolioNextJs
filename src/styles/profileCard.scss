@@ -221,3 +221,9 @@
 .infoLocation {
   margin-left: 24px;
 }
+
+@media screen and (max-width: 600px) {
+  .profileCard {
+    width: 70vw;
+  }
+}

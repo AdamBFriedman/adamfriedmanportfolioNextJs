@@ -9,7 +9,7 @@ import { setDarkMode, setLightMode } from "@/store/darkMode/darkModeSlice";
 import MenuIcon from "@mui/icons-material/Menu";
 import { setMobileMenuOpen } from "@/store/mobileMenu/mobileMenuSlice";
 
-interface isDarkModeStore {
+export interface isDarkModeStore {
   isDarkMode: {
     isDarkMode: boolean;
   };
