@@ -1,18 +1,20 @@
-import { configureStore } from "@reduxjs/toolkit";
-import darkModeReducer from "./darkModeSlice";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { setupListeners } from "@reduxjs/toolkit/query";
 
-export const selectDarkModeReducerState = (state: any) => state.isDarkMode;
+import darkModeReducer from "./darkMode/darkModeSlice";
+import mobileMenuReducer from "./mobileMenu/mobileMenuSlice";
 
-// export const darkMode = createSelector(
-//   selectDarkModeReducerState,
-//   (darkModeReducerState) => darkModeReducerState.isDarkMode
-// );
-
-export const store = configureStore({
-  reducer: {
-    isDarkMode: darkModeReducer,
-  },
+const rootReducer = combineReducers({
+  isDarkMode: darkModeReducer,
+  isMobileMenuOpen: mobileMenuReducer,
 });
 
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+// const persistedReducer = persistReducer(persistConfig, rootReducer);
+
+const store = configureStore({
+  reducer: rootReducer,
+});
+
+setupListeners(store.dispatch);
+
+export default store;

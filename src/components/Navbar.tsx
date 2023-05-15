@@ -1,16 +1,28 @@
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
+import { useTheme } from "@mui/material/styles";
+import { useMediaQuery } from "@mui/material";
 import Link from "next/link";
-import type { RootState } from "@/store/store";
 import { useSelector, useDispatch } from "react-redux";
-import { setDarkMode, setLightMode } from "@/store/darkModeSlice";
-// import MenuIcon from "@material-ui/icons/Menu";
+import { setDarkMode, setLightMode } from "@/store/darkMode/darkModeSlice";
+import MenuIcon from "@mui/icons-material/Menu";
+import { setMobileMenuOpen } from "@/store/mobileMenu/mobileMenuSlice";
+
+interface isDarkModeStore {
+  isDarkMode: {
+    isDarkMode: boolean;
+  };
+}
 
 const Navbar = () => {
-  const isMobileOrSmaller = false;
+  const theme = useTheme();
+  const isMobileOrSmaller = useMediaQuery(theme.breakpoints.down("sm"));
   const isDarkMode = useSelector(
-    (state: RootState) => state.isDarkMode.isDarkMode
+    (state: isDarkModeStore) => state.isDarkMode.isDarkMode
+  );
+  const isMobileMenuOpen = useSelector(
+    (state: any) => state.isMobileMenuOpen.isMobileMenuOpen
   );
   const dispatch = useDispatch();
   const handleClick = () => alert("click");
@@ -25,13 +37,12 @@ const Navbar = () => {
         {isMobileOrSmaller ? (
           <IconButton
             className={"iconButton"}
-            onClick={handleClick}
+            onClick={() => dispatch(setMobileMenuOpen())}
             edge="start"
             color="inherit"
             aria-label="menu"
           >
-            Menu Icon
-            {/* <MenuIcon /> */}
+            <MenuIcon />
           </IconButton>
         ) : (
           <>

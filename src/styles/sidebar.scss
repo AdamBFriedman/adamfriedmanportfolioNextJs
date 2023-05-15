@@ -1,0 +1,51 @@
+.drawerPaper {
+  background: #292b2c;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.icon {
+  margin: 16px;
+  padding: 0;
+  // color: theme.palette.secondary.main;
+}
+
+.menuBar {
+  text-align: center;
+}
+
+.menuLink {
+  text-decoration: none;
+  // color: theme.palette.secondary.main;
+  font-weight: 900;
+  transition: 1s;
+  // &:hover: {
+  //   textShadow:
+  //     1px 1px 0px #195190ff, 2px 2px 0px #195190ff, 3px 3px 0px #195190ff,
+  // }
+}
+.menuItem {
+  color: #fff;
+  padding: 24px 0;
+}
+.divider {
+  color: #fff !important;
+  background: #fff !important;
+}
+.lightbulb {
+  width: 150px;
+  height: 150px;
+  background: url("https://lh4.googleusercontent.com/-katLGTSCm2Q/UJC0_N7XCrI/AAAAAAAABq0/6GxNfNW-Ra4/s300/lightbulb.png")
+    no-repeat -150px 0;
+  cursor: pointer;
+  z-index: 800;
+  display: flex;
+  justify-content: center;
+  transform: translateX(-12%);
+}
+.lightBulb2 {
+  width: 150px;
+  height: 150px;
+  background: url("https://lh4.googleusercontent.com/-katLGTSCm2Q/UJC0_N7XCrI/AAAAAAAABq0/6GxNfNW-Ra4/s300/lightbulb.png")
+    no-repeat 0 0;
+}
