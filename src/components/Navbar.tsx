@@ -44,25 +44,53 @@ const Navbar = () => {
           </IconButton>
         ) : (
           <>
-            <Link href="/" className={"hover-shadow navLink"}>
+            <Link
+              href="/"
+              className={
+                isDarkMode
+                  ? "navLink navLinkDark hover-shadow"
+                  : "hover-shadow navLink"
+              }
+            >
               {"Home".split("").map((letter, index) => (
                 <span key={index}>{letter}</span>
               ))}
             </Link>
 
-            <Link className={"hover-shadow navLink"} href="/about">
+            <Link
+              className={
+                isDarkMode
+                  ? "navLink navLinkDark hover-shadow"
+                  : "hover-shadow navLink"
+              }
+              href="/about"
+            >
               {"About".split("").map((letter, index) => (
                 <span key={index}>{letter}</span>
               ))}
             </Link>
 
-            <Link className={"hover-shadow navLink"} href="/projects">
+            <Link
+              className={
+                isDarkMode
+                  ? "navLink navLinkDark hover-shadow"
+                  : "hover-shadow navLink"
+              }
+              href="/projects"
+            >
               {"Projects".split("").map((letter, index) => (
                 <span key={index}>{letter}</span>
               ))}
             </Link>
 
-            <Link className={"hover-shadow navLink"} href="/contact">
+            <Link
+              className={
+                isDarkMode
+                  ? "navLink navLinkDark hover-shadow"
+                  : "hover-shadow navLink"
+              }
+              href="/contact"
+            >
               {"Contact".split("").map((letter, index) => (
                 <span key={index}>{letter}</span>
               ))}

@@ -63,6 +63,10 @@
   font-weight: 700;
 }
 
+.navLinkDark:hover {
+  text-shadow: 1px 1px 0px #195190ff, 2px 2px 0px #195190ff, 3px 3px 0px #91c9ff;
+}
+
 .navLink span:hover:nth-child(8) {
   transition-delay: 0.7s;
 }
