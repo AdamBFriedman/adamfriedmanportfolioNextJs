@@ -1,14 +1,17 @@
 .drawerPaper {
-  background: #292b2c;
+  background: #7e7f80;
   width: 30%;
   margin: 0 auto;
   font-family: "Lato", sans-serif;
 }
 
+.drawerPaperDark {
+  background: #292b2c;
+}
+
 .icon {
   margin: 16px;
   padding: 0;
-  // color: theme.palette.secondary.main;
 }
 
 .menuBar {
@@ -17,13 +20,12 @@
 
 .menuLink {
   text-decoration: none;
-  // color: theme.palette.secondary.main;
   font-weight: 900;
   transition: 1s;
-  // &:hover: {
-  //   textShadow:
-  //     1px 1px 0px #195190ff, 2px 2px 0px #195190ff, 3px 3px 0px #195190ff,
-  // }
+  &:hover {
+    text-shadow: 1px 1px 0px #195190ff, 2px 2px 0px #195190ff,
+      3px 3px 0px #195190ff;
+  }
 }
 .menuItem {
   color: #fff;
@@ -43,10 +45,6 @@
   background: url("https://lh4.googleusercontent.com/-katLGTSCm2Q/UJC0_N7XCrI/AAAAAAAABq0/6GxNfNW-Ra4/s300/lightbulb.png")
     no-repeat -150px 0;
   cursor: pointer;
-  // z-index: 800;
-  // display: flex;
-  // justify-content: center;
-  // width: 100%;
   transform: scale(0.75);
 }
 .sideBarLightBulb2 {

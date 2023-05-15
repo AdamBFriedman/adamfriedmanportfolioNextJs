@@ -26,7 +26,7 @@ export const Sidebar = () => {
       open={isMobileMenuOpen}
       onClose={() => dispatch(setMobileMenuClose())}
       classes={{
-        paper: "drawerPaper",
+        paper: isDarkMode ? "drawerPaper drawerPaperDark" : "drawerPaper",
       }}
       ModalProps={{
         keepMounted: true, // Better open performance on mobile.
