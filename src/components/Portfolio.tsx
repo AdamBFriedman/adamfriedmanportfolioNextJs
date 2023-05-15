@@ -1,14 +1,12 @@
 import { useState } from "react";
-import type { RootState } from "@/store/store";
 import { useSelector } from "react-redux";
 import ProjectCard from "./ProjectCard";
 import FilterButtons from "./FilterButtons";
-// import Card from "./Card";
-// import FilterButtons from "./FilterButtons";
+import { isDarkModeStore } from "./Navbar";
 
 const Portfolio = () => {
   const isDarkMode = useSelector(
-    (state: RootState) => state.isDarkMode.isDarkMode
+    (state: isDarkModeStore) => state.isDarkMode.isDarkMode
   );
   const [filter, setFilter] = useState("all");
 

@@ -116,9 +116,6 @@
 .filterButton {
   transition: 0.5s;
   cursor: pointer;
-  // [theme.breakpoints.down('xs')]: {
-  //   marginBottom: theme.spacing(1)
-  // }
 }
 .filterButton:active {
   background-color: #195190ff;
@@ -185,5 +182,16 @@
     -webkit-transform: rotate(0);
     transform: rotate(0);
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .filterButtons {
+    display: block;
+    text-align: center;
+  }
+
+  .filterButton {
+    margin-bottom: 8px;
   }
 }
