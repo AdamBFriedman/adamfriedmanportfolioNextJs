@@ -40,7 +40,13 @@ const Navbar = () => {
             color="inherit"
             aria-label="menu"
           >
-            <MenuIcon className="navbarMenuIcon" />
+            <MenuIcon
+              className={
+                isDarkMode
+                  ? "navbarMenuIcon navbarMenuIconDark"
+                  : "navbarMenuIcon"
+              }
+            />
           </IconButton>
         ) : (
           <>
