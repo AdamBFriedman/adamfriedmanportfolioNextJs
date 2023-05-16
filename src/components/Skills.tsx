@@ -1,9 +1,9 @@
-import type { RootState } from "@/store/store";
 import { useSelector } from "react-redux";
+import { isDarkModeStore } from "./Navbar";
 
 const Skills = () => {
   const isDarkMode = useSelector(
-    (state: RootState) => state.isDarkMode.isDarkMode
+    (state: isDarkModeStore) => state.isDarkMode.isDarkMode
   );
   return (
     <div>
