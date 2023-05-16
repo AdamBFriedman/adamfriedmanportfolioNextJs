@@ -1,15 +1,17 @@
-import type { RootState } from "@/store/store";
 import { useSelector } from "react-redux";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import MessageIcon from "@mui/icons-material/Message";
+import PersonIcon from "@mui/icons-material/Person";
 import Link from "next/link";
 import Image from "next/image";
 import ProfilePic from "../images/profilePic.jpg";
+import { isDarkModeStore } from "./Navbar";
 
 const Contact = () => {
   const isDarkMode = useSelector(
-    (state: RootState) => state.isDarkMode.isDarkMode
+    (state: isDarkModeStore) => state.isDarkMode.isDarkMode
   );
 
   return (
@@ -21,50 +23,30 @@ const Contact = () => {
             className="profile-img bounce-in-top"
             src={ProfilePic}
           />
-          <h3 className="header">Adam Friedman</h3>
-          <p>Senior Web Developer with a passion for building.</p>
-          <a
-            className={
-              isDarkMode ? "bio-link" : `${"bio-link"} ${"bio-link-light"}`
-            }
-            target="_blank"
-            rel="noopener noreferrer"
+          <h3 className={isDarkMode ? "header headerDark" : "header"}>
+            Adam Friedman
+          </h3>
+          <p className={isDarkMode ? "subHeader subHeaderDark" : "subHeader"}>
+            Solution Architect with a passion for building
+          </p>
+          <Link
             href="https://www.linkedin.com/in/adam-friedman5/"
+            className={isDarkMode ? "bioLink bioLinkDark" : "bioLink"}
           >
-            LinkedIn
-            <i className="ml-3 fa fa-linkedin"></i>
-          </a>
-          <a
-            className={
-              isDarkMode ? "bio-link" : `${"bio-link"} ${"bio-link-light"}`
-            }
-            target="_blank"
-            rel="noopener noreferrer"
+            <span className="bioLinkName">LinkedIn</span> <LinkedInIcon />
+          </Link>
+          <Link
             href="https://github.com/AdamBFriedman"
+            className={isDarkMode ? "bioLink bioLinkDark" : "bioLink"}
           >
-            Github
-            <i className="ml-3 fa fa-github"></i>
-          </a>
-          <a
-            className={
-              isDarkMode ? "bio-link" : `${"bio-link"} ${"bio-link-light"}`
-            }
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://gitlab.com/Kustanza"
-          >
-            Gitlab
-            <i className="ml-3 fa fa-gitlab"></i>
-          </a>
-          <a
-            className={
-              isDarkMode ? "bio-link" : `${"bio-link"} ${"bio-link-light"}`
-            }
+            <span className="bioLinkName">GitHub</span> <GitHubIcon />
+          </Link>
+          <Link
             href="mailto:adam.friedman5@gmail.com?subject=Let's chat!&body=Hi Adam..."
+            className={isDarkMode ? "bioLink bioLinkDark" : "bioLink"}
           >
-            Email
-            <i className="ml-3 fa fa-envelope-o"></i>
-          </a>
+            <span className="bioLinkName">Email</span> <EmailIcon />
+          </Link>
         </div>
         <div className="contact">
           <form
@@ -72,14 +54,17 @@ const Contact = () => {
             action="https://formsubmit.co/adam.friedman5@gmail.com"
             method="POST"
           >
-            <legend className="header">Get In Touch</legend>
+            <legend className="legendHeader">Get In Touch</legend>
             <fieldset>
               <label
-                className="fa fa-user"
+                className="formLabel"
                 htmlFor="name-input"
                 aria-hidden="true"
-              ></label>
+              >
+                <PersonIcon />
+              </label>
               <input
+                className={isDarkMode ? "formInput formInputDark" : "formInput"}
                 type="text"
                 name="name"
                 placeholder="Name..."
@@ -88,11 +73,14 @@ const Contact = () => {
             </fieldset>
             <fieldset>
               <label
-                className="fa fa-envelope"
+                className="formLabel"
                 htmlFor="email-input"
                 aria-hidden="true"
-              ></label>
+              >
+                <EmailIcon />
+              </label>
               <input
+                className={isDarkMode ? "formInput formInputDark" : "formInput"}
                 type="email"
                 name="email"
                 placeholder="Email..."
@@ -101,11 +89,14 @@ const Contact = () => {
             </fieldset>
             <fieldset>
               <label
-                className="fa fa-comment"
+                className="formLabel"
                 htmlFor="message-input"
                 aria-hidden="true"
-              ></label>
+              >
+                <MessageIcon />
+              </label>
               <textarea
+                className={isDarkMode ? "formInput formInputDark" : "formInput"}
                 name="message"
                 placeholder="Message..."
                 id="message-input"
