@@ -101,7 +101,7 @@
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  font-size: 170px;
+  font-size: 120px;
 }
 
 .profileCard {
@@ -123,7 +123,7 @@
 .profileRing:before,
 .profileRing:after {
   content: "";
-  padding: 0.7em 0.4em;
+  padding: 0.6em 0.4em;
   position: absolute;
   left: 50%;
   width: 145%;
@@ -222,10 +222,15 @@
 
 @media screen and (max-width: 600px) {
   .profileCard {
+    height: 50vh;
     width: 70vw;
   }
 
   .profileLinksWrapper {
     width: 70%;
+  }
+
+  .profileRing {
+    font-size: 170px;
   }
 }
