@@ -39,6 +39,35 @@ $surfaces: $walls * 2;
   --offset-per-surface: calc(360deg / 24);
 }
 
+// Animations
+@keyframes angle {
+  from {
+    --angle: 360deg;
+  }
+  to {
+    --angle: 0deg;
+  }
+}
+
+@keyframes ball-container {
+  from {
+    transform: translateZ(-40vmin);
+    opacity: 0;
+  }
+  10% {
+    transform: translateZ(-25vmin);
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateZ(70vmin);
+  }
+}
+
 .homeContainer {
   position: relative;
   width: 50vmin;
@@ -180,15 +209,6 @@ $surfaces: $walls * 2;
   mask-position: 0 0;
 }
 
-@keyframes angle {
-  from {
-    --angle: 360deg;
-  }
-  to {
-    --angle: 0deg;
-  }
-}
-
 .ball-container {
   display: grid;
   place-items: center;
@@ -222,37 +242,14 @@ $surfaces: $walls * 2;
   transform: rotateX(45deg) rotateY(45deg) translateY(-20vmin);
 }
 
-@keyframes ball-container {
-  from {
-    transform: translateZ(-40vmin);
-    opacity: 0;
-  }
-  10% {
-    transform: translateZ(-25vmin);
-    opacity: 1;
-  }
-
-  85% {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    transform: translateZ(70vmin);
-  }
-}
-
 .homeWrapper {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  // display: grid;
-  // place-items: center;
   background: var(--color-background);
   color: var(--color-on-background);
-  // overflow: hidden;
-  // mix-blend-mode: plus-lighter;
 }
 
 // .homeWrapperDark {

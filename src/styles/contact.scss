@@ -70,7 +70,6 @@ $transblack: rgba(0, 0, 0, 0.3);
     }
     .bioLink {
       @include capsfont(1rem);
-      // display: inline-block;
       display: flex;
       justify-content: center;
       align-items: center;
