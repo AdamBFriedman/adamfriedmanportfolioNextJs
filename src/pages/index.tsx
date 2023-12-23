@@ -1,8 +1,19 @@
+import { isDarkModeStore } from "@/components/Navbar";
 import Link from "next/link";
+import { useSelector } from "react-redux";
 
 const Home = () => {
+  const isDarkMode = useSelector(
+    (state: isDarkModeStore) => state.isDarkMode.isDarkMode
+  );
   return (
-    <div className="homeWrapper">
+    <div
+      className={
+        isDarkMode
+          ? "homeWrapper homeWrapperDark"
+          : "homeWrapper homeWrapperLight"
+      }
+    >
       <Link href="/about">
         <div className="homeContainer">
           <div className="wall">

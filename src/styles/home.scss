@@ -115,12 +115,12 @@ $surfaces: $walls * 2;
       var(--c4),
       var(--c3),
       var(--c2)
-    ) !important;
-  background-repeat: no-repeat !important;
+    );
+  background-repeat: no-repeat;
   background-size: 100% 100%,
     calc(100% - var(--border-width) * 2) calc(100% - var(--border-width) * 2),
-    100%, 100% !important;
-  background-position: 0 0, var(--border-width) var(--border-width), 0 0 !important;
+    100%, 100%;
+  background-position: 0 0, var(--border-width) var(--border-width), 0 0;
 
   &:nth-child(2) {
     --circle-diameter: calc(
@@ -137,11 +137,11 @@ $surfaces: $walls * 2;
   width: 4.5vmin;
   background: linear-gradient(black, black) no-repeat,
     linear-gradient(to top, var(--c1), var(--c3), var(--c2), var(--c1))
-      no-repeat !important;
+      no-repeat;
   background-size: calc(100% - var(--border-width) * 2)
       calc(100% - var(--border-width) * 2),
-    100%, 100% !important;
-  background-position: var(--border-width) var(--border-width), 0 0 !important;
+    100%, 100%;
+  background-position: var(--border-width) var(--border-width), 0 0;
 }
 
 .top {
@@ -151,15 +151,15 @@ $surfaces: $walls * 2;
   height: 6vmin;
   background: linear-gradient(black, black) no-repeat,
     linear-gradient(to right, var(--c1), var(--c3), var(--c2), var(--c1))
-      no-repeat !important;
+      no-repeat;
   background-size: calc(100% - var(--border-width) * 2)
       calc(100% - var(--border-width) * 2),
-    100%, 100% !important;
+    100%, 100%;
   background-position: var(--border-width) var(--border-width), 0 0;
   --angle-offset: calc(var(--index) * var(--offset-per-surface));
   --circle-diameter: calc(
     var(--hole-radius) * cos(calc(var(--angle) + var(--angle-offset)))
-  ) !important;
+  );
   -webkit-mask: radial-gradient(
     calc(var(--circle-diameter) * 0.86) at 50%
       calc(60% / cos(calc(var(--angle) + var(--angle-offset)))),
@@ -217,7 +217,7 @@ $surfaces: $walls * 2;
       var(--c1),
       var(--c2),
       var(--c1)
-    ) !important;
+    );
   box-shadow: 0 0 10vmin rgba(255, 255, 255, 0.08);
   transform: rotateX(45deg) rotateY(45deg) translateY(-20vmin);
 }
@@ -241,13 +241,21 @@ $surfaces: $walls * 2;
   }
 }
 
-// .homeWrapper {
-//   width: 100vw;
-//   height: 100vh;
-//   display: grid;
-//   place-items: center;
-//   background: var(--color-background) !important;
-//   color: var(--color-on-background) !important;
-//   overflow: hidden;
-//   mix-blend-mode: plus-lighter;
-// }
+.homeWrapper {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  // background: var(--color-background);
+  // color: var(--color-on-background);
+  overflow: hidden;
+  mix-blend-mode: plus-lighter;
+}
+
+.homeWrapperDark {
+  background: linear-gradient(120deg, #7e7f80 50%, #292b2c 50%);
+}
+
+.homeWrapperLight {
+  background: linear-gradient(120deg, #fff 50%, #7e7f80 50%);
+}

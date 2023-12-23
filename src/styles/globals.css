@@ -13,14 +13,3 @@ body {
   overflow-x: hidden;
   font-family: "Lato", sans-serif;
 }
-
-.homeWrapper {
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  place-items: center;
-  background: var(--color-background) !important;
-  color: var(--color-on-background) !important;
-  overflow: hidden;
-  mix-blend-mode: plus-lighter;
-}
