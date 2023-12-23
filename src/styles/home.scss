@@ -195,7 +195,7 @@ $surfaces: $walls * 2;
   position: absolute;
   inset: 0;
   transform: translateZ(-60vmin);
-  animation: ball-container var(--animation-duration) linear infinite;
+  // animation: ball-container var(--animation-duration) linear infinite;
 }
 
 .ball {
