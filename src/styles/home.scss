@@ -41,12 +41,12 @@ $surfaces: $walls * 2;
 
 .homeContainer {
   position: relative;
-  // width: 50vmin;
-  // aspect-ratio: 1/1.2;
-  // --angle: 30deg;
-  // animation: angle var(--animation-duration) linear infinite;
-  // transform-style: preserve-3d;
-  // transform: rotateX(-45deg) rotateY(45deg);
+  width: 50vmin;
+  aspect-ratio: 1/1.2;
+  --angle: 30deg;
+  animation: angle var(--animation-duration) linear infinite;
+  transform-style: preserve-3d;
+  transform: rotateX(-45deg) rotateY(45deg);
 }
 
 .wall {
@@ -242,14 +242,14 @@ $surfaces: $walls * 2;
 }
 
 .homeWrapper {
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  place-items: center;
+  // width: 100vw;
+  // height: 100vh;
+  // display: grid;
+  // place-items: center;
   // background: var(--color-background);
   // color: var(--color-on-background);
-  overflow: hidden;
-  mix-blend-mode: plus-lighter;
+  // overflow: hidden;
+  // mix-blend-mode: plus-lighter;
 }
 
 .homeWrapperDark {
