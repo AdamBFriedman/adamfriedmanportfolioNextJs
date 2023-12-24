@@ -35,21 +35,29 @@ export const Sidebar = () => {
       <div className={"menuBar"}>
         <Divider />
         <Link href="/" className={"menuLink"}>
-          <List className={"menuItem"}>Home</List>
+          <List className={isDarkMode ? "menuItem menuItemDark" : "menuItem"}>
+            Home
+          </List>
         </Link>
-        <Divider className={"divider"} />
+        <Divider className={isDarkMode ? "divider dividerDark" : "divider"} />
         <Link href="/about" className={"menuLink"}>
-          <List className={"menuItem"}>About</List>
+          <List className={isDarkMode ? "menuItem menuItemDark" : "menuItem"}>
+            About
+          </List>
         </Link>
-        <Divider className={"divider"} />
+        <Divider className={isDarkMode ? "divider dividerDark" : "divider"} />
         <Link href="/projects" className={"menuLink"}>
-          <List className={"menuItem"}>Projects</List>
+          <List className={isDarkMode ? "menuItem menuItemDark" : "menuItem"}>
+            Projects
+          </List>
         </Link>
-        <Divider className={"divider"} />
+        <Divider className={isDarkMode ? "divider dividerDark" : "divider"} />
         <Link href="/contact" className={"menuLink"}>
-          <List className={"menuItem"}>Contact</List>
+          <List className={isDarkMode ? "menuItem menuItemDark" : "menuItem"}>
+            Contact
+          </List>
         </Link>
-        <Divider className={"divider"} />
+        <Divider className={isDarkMode ? "divider dividerDark" : "divider"} />
         {isDarkMode ? (
           <div className={"sideBarLightbulbWrapper"}>
             <div

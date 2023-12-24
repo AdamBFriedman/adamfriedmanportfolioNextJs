@@ -28,12 +28,19 @@
   }
 }
 .menuItem {
-  color: #fff;
+  color: #292b2c;
   padding: 24px 0;
 }
+.menuItemDark {
+  color: white;
+}
 .divider {
-  color: #fff !important;
-  background: #fff !important;
+  color: #292b2c !important;
+  background: #292b2c !important;
+}
+.dividerDark {
+  color: white !important;
+  background: white !important;
 }
 .sideBarLightbulbWrapper {
   display: flex;

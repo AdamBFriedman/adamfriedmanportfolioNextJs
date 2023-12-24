@@ -21,9 +21,6 @@ const Navbar = () => {
   const isDarkMode = useSelector(
     (state: isDarkModeStore) => state.isDarkMode.isDarkMode
   );
-  const isMobileMenuOpen = useSelector(
-    (state: any) => state.isMobileMenuOpen.isMobileMenuOpen
-  );
   const dispatch = useDispatch();
   const setMode = () =>
     isDarkMode ? dispatch(setLightMode()) : dispatch(setDarkMode());

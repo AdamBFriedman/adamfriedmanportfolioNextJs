@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
   background: #7e7f80 !important;
   height: 10vh;
   font-family: "Space Mono", monospace;
@@ -29,9 +28,13 @@
   transition: 0.5s;
   cursor: pointer;
   margin: 0 32px;
-  color: #fff;
+  color: #292b2c;
   text-decoration: none;
   font-weight: 100;
+}
+
+.navLinkDark {
+  color: white;
 }
 
 .navLink span {
