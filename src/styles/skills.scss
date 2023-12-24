@@ -147,6 +147,7 @@ $chartBarGap: 10px;
 }
 
 .chart__titleDark {
+  text-transform: capitalize;
   display: block;
   margin: 0 0 10px 10px;
   color: white;
@@ -162,16 +163,13 @@ $chartBarGap: 10px;
 }
 
 .chart__title {
+  text-transform: capitalize;
   color: black;
   display: block;
   margin: 0 0 10px 10px;
-
   font-weight: bold;
-
   opacity: 0;
-
   animation: 1s anim-lightspeed-in ease forwards;
-
   .chart--prod & {
     animation-delay: 3.3s;
   }

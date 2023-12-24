@@ -76,60 +76,43 @@ const Skills = () => {
         </ul>
 
         <div className="charts">
-          <div className="chart chart--dev">
-            <span className={isDarkMode ? "chart__titleDark" : "chart__title"}>
-              Development
-            </span>
-            <ul className="chart--horiz">
-              {skills.development.map((skill: Skill) => {
-                return (
-                  <li
-                    key={skill.id}
-                    className={isDarkMode ? "chart__barDark" : "chart__bar"}
-                    style={{ width: skill.percentage }}
-                  >
-                    <span className="chart__label">{skill.name}</span>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-
-          <div className="chart chart--prod">
-            <span className={isDarkMode ? "chart__titleDark" : "chart__title"}>
-              Collaboration
-            </span>
-            {skills.collaboration.map((skill: Skill) => {
-              return (
-                <li
-                  key={skill.id}
-                  className={isDarkMode ? "chart__barDark" : "chart__bar"}
-                  style={{ width: skill.percentage }}
+          {skills.map((skill: any, index: number) => {
+            return (
+              <div
+                key={index}
+                className={
+                  index === 0
+                    ? "chart chart--dev"
+                    : index === 1
+                    ? "chart chart--prod"
+                    : "chart chart--design"
+                }
+              >
+                <span
+                  className={isDarkMode ? "chart__titleDark" : "chart__title"}
                 >
-                  <span className="chart__label">{skill.name}</span>
-                </li>
-              );
-            })}
-          </div>
-
-          <div className="chart chart--design">
-            <span className={isDarkMode ? "chart__titleDark" : "chart__title"}>
-              Design
-            </span>
-            <ul className="chart--horiz">
-              {skills.design.map((skill: Skill) => {
-                return (
-                  <li
-                    key={skill.id}
-                    className={isDarkMode ? "chart__barDark" : "chart__bar"}
-                    style={{ width: skill.percentage }}
-                  >
-                    <span className="chart__label">{skill.name}</span>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+                  {Object.keys(skills[index])}
+                </span>
+                <ul className="chart--horiz">
+                  {skills[index][Object.keys(skills[index])[0]].map(
+                    (skill: any) => {
+                      return (
+                        <li
+                          key={skill.id}
+                          className={
+                            isDarkMode ? "chart__barDark" : "chart__bar"
+                          }
+                          style={{ width: skill.percentage }}
+                        >
+                          <span className="chart__label">{skill.name}</span>
+                        </li>
+                      );
+                    }
+                  )}
+                </ul>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
