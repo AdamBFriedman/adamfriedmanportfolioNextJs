@@ -134,12 +134,12 @@
 }
 
 .profileRing:before {
-  border-color: #91c9ff #91c9ff rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  border-color: #a2a2a1ff #a2a2a1ff rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
   z-index: -1;
 }
 
 .profileRing:after {
-  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #91c9ff #91c9ff;
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #a2a2a1ff #a2a2a1ff;
 }
 
 .profileRingDark:before {
