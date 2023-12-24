@@ -11,8 +11,12 @@ const Portfolio = () => {
   );
   const [filter, setFilter] = useState("all");
 
-  const handleFilter = (id: string) => {
-    switch (id) {
+  const handleFilter = (filterOption: string) => {
+    if (filter === filterOption) {
+      setFilter("all");
+      return;
+    }
+    switch (filterOption) {
       case "all":
         setFilter("all");
         break;
