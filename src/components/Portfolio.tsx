@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import ProjectCard from "./ProjectCard";
 import FilterButtons from "./FilterButtons";
 import { isDarkModeStore } from "./Navbar";
 import { Project } from "@/data/interfaces";
+import { AwesomeCard } from "./AwesomeCard";
 let projects = require("../data/projects.json");
 
 const Portfolio = () => {
@@ -43,30 +43,32 @@ const Portfolio = () => {
       <div className={"filterButtonWrapper"}>
         <FilterButtons setFilter={handleFilter} isDarkMode={isDarkMode} />
       </div>
-      {projects
-        .filter((project: Project) => {
-          return filter === "all"
-            ? project
-            : filter === "javascript"
-            ? project.filter === "javascript"
-            : filter === "react"
-            ? project.filter === "react"
-            : filter === "vue"
-            ? project.filter === "vue"
-            : filter === "html"
-            ? project.filter === "html"
-            : "";
-        })
-        .map((project: Project, index: number) => (
-          <div key={index} className={"projectCardWrapper"}>
-            <ProjectCard
-              filter={["card", "filter", project.filter].join(" ")}
-              title={project.title}
-              src={require(`../images/projects/project${project.imageID}${project.imageType}`)}
-              href={project.href}
-            />
-          </div>
-        ))}
+      {projects &&
+        projects
+          .filter((project: Project) => {
+            return filter === "all"
+              ? project
+              : filter === "javascript"
+              ? project.filter === "javascript"
+              : filter === "react"
+              ? project.filter === "react"
+              : filter === "vue"
+              ? project.filter === "vue"
+              : filter === "html"
+              ? project.filter === "html"
+              : "";
+          })
+          .map((project: Project, index: number) => (
+            <div key={index} className={"projectCardWrapper"}>
+              <a href={project.href} target="_blank" rel="noopener noreferrer">
+                <AwesomeCard
+                  hoverImage={require(`../images/projects/hoverImages/${project.hoverImage}`)}
+                  projectImage={require(`../images/projects/project${project.imageID}${project.imageType}`)}
+                  projectTitle={project.title}
+                />
+              </a>
+            </div>
+          ))}
     </div>
   );
 };

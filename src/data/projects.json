@@ -5,7 +5,8 @@
     "filter": "vue",
     "title": "Miami Dolphins",
     "imageID": "28",
-    "href": "https://miamidolphins.netlify.app/"
+    "href": "https://miamidolphins.netlify.app/",
+    "hoverImage": "dolphins.png"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "filter": "javascript",
     "title": "Fractal Trees",
     "imageID": "27",
-    "href": "https://fractaltreefun.netlify.app/"
+    "href": "https://fractaltreefun.netlify.app/",
+    "hoverImage": "superman.png"
   },
   {
     "id": 3,
@@ -21,15 +23,17 @@
     "filter": "javascript",
     "title": "Trails of Adam",
     "imageID": "26",
-    "href": "https://trailsofadam.netlify.app/"
+    "href": "https://trailsofadam.netlify.app/",
+    "hoverImage": "superman.png"
   },
   {
     "id": 4,
     "imageType": ".png",
     "filter": "javascript",
-    "title": "Mario Memory Game",
+    "title": "28 Memory Game",
     "imageID": "25",
-    "href": "https://mariomemorygame.netlify.app/"
+    "href": "https://28memorygame.netlify.app/",
+    "hoverImage": "mario.png"
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "filter": "javascript",
     "title": "Random Circles",
     "imageID": "24",
-    "href": "https://randomcircles.netlify.app/"
+    "href": "https://randomcircles.netlify.app/",
+    "hoverImage": "superman.png"
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "filter": "react",
     "title": "Walking Around",
     "imageID": "23",
-    "href": "https://walkingaround.netlify.app/"
+    "href": "https://walkingaround.netlify.app/",
+    "hoverImage": "cuphead.png"
   },
   {
     "id": 7,
@@ -53,7 +59,8 @@
     "filter": "html",
     "title": "The Friedman Times",
     "imageID": "22",
-    "href": "https://thefriedmantimes.netlify.app/"
+    "href": "https://thefriedmantimes.netlify.app/",
+    "hoverImage": "newspaper.png"
   },
   {
     "id": 8,
@@ -61,7 +68,8 @@
     "filter": "react",
     "title": "Merge Sort Visualizer",
     "imageID": "21",
-    "href": "https://mergesort.netlify.app/"
+    "href": "https://mergesort.netlify.app/",
+    "hoverImage": "superman.png"
   },
   {
     "id": 9,
@@ -69,7 +77,8 @@
     "filter": "vue",
     "title": "PlayTable",
     "imageID": "20",
-    "href": "https://www.playtable.com/"
+    "href": "https://www.playtable.com/",
+    "hoverImage": "superman.png"
   },
   {
     "id": 10,
@@ -77,7 +86,8 @@
     "filter": "react",
     "title": "COVID-19 Tracker",
     "imageID": "19",
-    "href": "https://trackcovid19daily.netlify.app/"
+    "href": "https://trackcovid19daily.netlify.app/",
+    "hoverImage": "covid.png"
   },
   {
     "id": 11,
@@ -85,7 +95,8 @@
     "filter": "react",
     "title": "Expense Tracker",
     "imageID": "18",
-    "href": "https://trackyourexpenses.netlify.app/"
+    "href": "https://trackyourexpenses.netlify.app/",
+    "hoverImage": "calculator.png"
   },
   {
     "id": 12,
@@ -93,7 +104,8 @@
     "filter": "react",
     "title": "Hotel Friedman",
     "imageID": "17",
-    "href": "https://hotelfriedman.netlify.app/"
+    "href": "https://hotelfriedman.netlify.app/",
+    "hoverImage": "hotel.png"
   },
   {
     "id": 13,
@@ -101,7 +113,8 @@
     "filter": "javascript",
     "title": "Chuck Norris",
     "imageID": "16",
-    "href": "https://chucknorrisfacts.netlify.app/"
+    "href": "https://chucknorrisfacts.netlify.app/",
+    "hoverImage": "chuckNorris.png"
   },
   {
     "id": 14,
@@ -109,7 +122,8 @@
     "filter": "react",
     "title": "8 Bit Art",
     "imageID": "15",
-    "href": "https://8bitart.netlify.com/"
+    "href": "https://8bitart.netlify.com/",
+    "hoverImage": "skull.png"
   },
   {
     "id": 15,
@@ -117,7 +131,8 @@
     "filter": "javascript",
     "title": "Presidential Debate",
     "imageID": "14",
-    "href": "https://presidentialdebate.netlify.app/"
+    "href": "https://presidentialdebate.netlify.app/",
+    "hoverImage": "president.png"
   },
   {
     "id": 16,
@@ -125,7 +140,8 @@
     "filter": "html",
     "title": "The Friedman Bunch",
     "imageID": "13",
-    "href": "https://thefriedmanbunch.netlify.app/"
+    "href": "https://thefriedmanbunch.netlify.app/",
+    "hoverImage": "bradyBunch.png"
   },
   {
     "id": 17,
@@ -133,7 +149,8 @@
     "filter": "html",
     "title": "Google Duplicate",
     "imageID": "12",
-    "href": "https://googlehome.netlify.app/"
+    "href": "https://googlehome.netlify.app/",
+    "hoverImage": "google.png"
   },
   {
     "id": 18,
@@ -141,7 +158,8 @@
     "filter": "react",
     "title": "Pokedex",
     "imageID": "11",
-    "href": "https://pokedexgen1.netlify.app/#/"
+    "href": "https://pokedexgen1.netlify.app/#/",
+    "hoverImage": "pokemon.svg"
   },
   {
     "id": 19,
@@ -149,7 +167,8 @@
     "filter": "javascript",
     "title": "CK's Coffee Shop",
     "imageID": "10",
-    "href": "https://ckscoffeeshop.netlify.app/"
+    "href": "https://ckscoffeeshop.netlify.app/",
+    "hoverImage": "dunkin.png"
   },
   {
     "id": 20,
@@ -157,7 +176,8 @@
     "filter": "javascript",
     "title": "For Goodness Cakes",
     "imageID": "9",
-    "href": "https://forgoodnesscakes.netlify.app/"
+    "href": "https://forgoodnesscakes.netlify.app/",
+    "hoverImage": "cake.png"
   },
   {
     "id": 21,
@@ -165,7 +185,8 @@
     "filter": "react",
     "title": "Recipe Search",
     "imageID": "8",
-    "href": "https://recipesearch.netlify.app/"
+    "href": "https://recipesearch.netlify.app/",
+    "hoverImage": "recipe.png"
   },
   {
     "id": 22,
@@ -173,7 +194,8 @@
     "filter": "react",
     "title": "Warriors To Do List",
     "imageID": "7",
-    "href": "https://todolistwarriors.netlify.app/"
+    "href": "https://todolistwarriors.netlify.app/",
+    "hoverImage": "warriors.png"
   },
   {
     "id": 23,
@@ -181,7 +203,8 @@
     "filter": "react",
     "title": "Random Meme Generator",
     "imageID": "5",
-    "href": "https://randommemegenerator.netlify.app/"
+    "href": "https://randommemegenerator.netlify.app/",
+    "hoverImage": "drake.png"
   },
   {
     "id": 24,
@@ -189,7 +212,8 @@
     "filter": "javascript",
     "title": "Knights Timer",
     "imageID": "4",
-    "href": "https://ucfzella.netlify.app/"
+    "href": "https://ucfzella.netlify.app/",
+    "hoverImage": "knights.png"
   },
   {
     "id": 25,
@@ -197,7 +221,8 @@
     "filter": "javascript",
     "title": "Snake Game",
     "imageID": "3",
-    "href": "https://snakegamejs.netlify.app/"
+    "href": "https://snakegamejs.netlify.app/",
+    "hoverImage": "snake.png"
   },
   {
     "id": 26,
@@ -205,7 +230,8 @@
     "filter": "html",
     "title": "Dog Breeders of America",
     "imageID": "2",
-    "href": "http://www.dogbreedersamerica.com/"
+    "href": "http://www.dogbreedersamerica.com/",
+    "hoverImage": "puppy.png"
   },
   {
     "id": 27,
@@ -213,6 +239,7 @@
     "filter": "react",
     "title": "Big Joey Magic Showy",
     "imageID": "1",
-    "href": "https://bjms.netlify.app/"
+    "href": "https://bjms.netlify.app/",
+    "hoverImage": "magician.png"
   }
 ]

@@ -1,4 +1,5 @@
 export interface Project {
+  hoverImage: string;
   id: number;
   imageType: string;
   filter: string;

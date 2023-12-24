@@ -1,4 +1,3 @@
-import { Skill } from "@/data/interfaces";
 import { useSelector } from "react-redux";
 import { isDarkModeStore } from "./Navbar";
 let skills = require("../data/skills.json");

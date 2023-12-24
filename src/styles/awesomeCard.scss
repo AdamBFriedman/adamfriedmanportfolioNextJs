@@ -1,0 +1,88 @@
+:root {
+  --card-height: 300px;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+.awesomeCardWrapper {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.awesomeCard:hover .awesomeCardWrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.awesomeCardWrapper::before,
+.awesomeCardWrapper::after {
+  content: "";
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+.awesomeCardWrapper::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+.awesomeCardWrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+.awesomeCard:hover .awesomeCardWrapper::before,
+.awesomeCardWrapper::after {
+  opacity: 1;
+}
+
+.awesomeCard:hover .awesomeCardWrapper::after {
+  height: 120px;
+}
+
+.awesomeCardTitleWrapper {
+  background: black;
+  color: white;
+  text-align: center;
+  transform: translateY(-2em);
+  padding: 0.5em 0;
+  width: 300px;
+}
+
+.title {
+  width: 100%;
+  transition: transform 0.5s;
+}
+.awesomeCard:hover .title {
+  transform: translate3d(0%, -50px, 100px);
+}
+
+.character {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+
+.awesomeCard:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
