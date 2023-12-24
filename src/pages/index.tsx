@@ -8,15 +8,13 @@ const Home = () => {
   );
 
   const createHex = () => {
-    let hexCode1 = "";
-    let hexValues1 = "0123456789abcdef";
+    let hexCode = "";
+    let hexValues = "0123456789abcdef";
 
     for (let i = 0; i < 6; i++) {
-      hexCode1 += hexValues1.charAt(
-        Math.floor(Math.random() * hexValues1.length)
-      );
+      hexCode += hexValues.charAt(Math.floor(Math.random() * hexValues.length));
     }
-    return hexCode1;
+    return hexCode;
   };
 
   const generateGradient = () => {

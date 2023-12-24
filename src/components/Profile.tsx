@@ -33,7 +33,7 @@ const Profile = () => {
                 <div className={"profilePara"}>
                   <h2 className={"infoHeader"}>Adam Friedman</h2>
                   <span className={"infoSubHeader"}>
-                    Solution Architect{" "}
+                    Solution Architect, Manager{" "}
                     <span className={"infoLocation"}>Austin, TX</span>
                   </span>
                 </div>
