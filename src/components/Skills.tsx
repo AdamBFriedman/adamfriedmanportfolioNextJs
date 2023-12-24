@@ -1,10 +1,12 @@
 import { useSelector } from "react-redux";
 import { isDarkModeStore } from "./Navbar";
+let skills = require("../data/skills.json");
 
 const Skills = () => {
   const isDarkMode = useSelector(
     (state: isDarkModeStore) => state.isDarkMode.isDarkMode
   );
+
   return (
     <div>
       <div className="skills">
@@ -78,61 +80,17 @@ const Skills = () => {
               Development
             </span>
             <ul className="chart--horiz">
-              <li
-                className={isDarkMode ? "chart__barDark" : "chart__bar"}
-                style={{ width: "98%" }}
-              >
-                <span className="chart__label">HTML5/CSS</span>
-              </li>
-              <li
-                className={isDarkMode ? "chart__barDark" : "chart__bar"}
-                style={{ width: "95%" }}
-              >
-                <span className="chart__label">JavaScript</span>
-              </li>
-              <li
-                className={isDarkMode ? "chart__barDark" : "chart__bar"}
-                style={{ width: "90%" }}
-              >
-                <span className="chart__label">ReactJS</span>
-              </li>
-              <li
-                className={isDarkMode ? "chart__barDark" : "chart__bar"}
-                style={{ width: "85%" }}
-              >
-                <span className="chart__label">VueJS</span>
-              </li>
-              <li
-                className={isDarkMode ? "chart__barDark" : "chart__bar"}
-                style={{ width: "80%" }}
-              >
-                <span className="chart__label">SASS/LESS</span>
-              </li>
-
-              <li
-                className={isDarkMode ? "chart__barDark" : "chart__bar"}
-                style={{ width: "70%" }}
-              >
-                <span className="chart__label">NodeJS</span>
-              </li>
-              <li
-                className={isDarkMode ? "chart__barDark" : "chart__bar"}
-                style={{ width: "55%" }}
-              >
-                <span className="chart__label">ExpressJS</span>
-              </li>
-              <li
-                className={isDarkMode ? "chart__barDark" : "chart__bar"}
-                style={{ width: "35%" }}
-              >
-                <span className="chart__label">NoSQL</span>
-              </li>
-              <li
-                className={isDarkMode ? "chart__barDark" : "chart__bar"}
-                style={{ width: "30%" }}
-              >
-                <span className="chart__label">MongoDB</span>
-              </li>
+              {skills.development.map((skill: any) => {
+                return (
+                  <li
+                    key={skill.id}
+                    className={isDarkMode ? "chart__barDark" : "chart__bar"}
+                    style={{ width: skill.percentage }}
+                  >
+                    <span className="chart__label">{skill.name}</span>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
@@ -140,20 +98,17 @@ const Skills = () => {
             <span className={isDarkMode ? "chart__titleDark" : "chart__title"}>
               Collaboration
             </span>
-            <ul className="chart--horiz">
-              <li
-                className={isDarkMode ? "chart__barDark" : "chart__bar"}
-                style={{ width: "85%" }}
-              >
-                <span className="chart__label">Git/Github/Gitlab</span>
-              </li>
-              <li
-                className={isDarkMode ? "chart__barDark" : "chart__bar"}
-                style={{ width: "80%" }}
-              >
-                <span className="chart__label">Jira</span>
-              </li>
-            </ul>
+            {skills.collaboration.map((skill: any) => {
+              return (
+                <li
+                  key={skill.id}
+                  className={isDarkMode ? "chart__barDark" : "chart__bar"}
+                  style={{ width: skill.percentage }}
+                >
+                  <span className="chart__label">{skill.name}</span>
+                </li>
+              );
+            })}
           </div>
 
           <div className="chart chart--design">
@@ -161,31 +116,17 @@ const Skills = () => {
               Design
             </span>
             <ul className="chart--horiz">
-              <li
-                className={isDarkMode ? "chart__barDark" : "chart__bar"}
-                style={{ width: "90%" }}
-              >
-                <span className="chart__label">Material UI</span>
-              </li>
-              <li
-                className={isDarkMode ? "chart__barDark" : "chart__bar"}
-                style={{ width: "55%" }}
-              >
-                <span className="chart__label">Figma</span>
-              </li>
-
-              <li
-                className={isDarkMode ? "chart__barDark" : "chart__bar"}
-                style={{ width: "50%" }}
-              >
-                <span className="chart__label">Zeplin</span>
-              </li>
-              <li
-                className={isDarkMode ? "chart__barDark" : "chart__bar"}
-                style={{ width: "42%" }}
-              >
-                <span className="chart__label">Sketch</span>
-              </li>
+              {skills.design.map((skill: any) => {
+                return (
+                  <li
+                    key={skill.id}
+                    className={isDarkMode ? "chart__barDark" : "chart__bar"}
+                    style={{ width: skill.percentage }}
+                  >
+                    <span className="chart__label">{skill.name}</span>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
