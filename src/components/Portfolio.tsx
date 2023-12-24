@@ -3,7 +3,8 @@ import { useSelector } from "react-redux";
 import ProjectCard from "./ProjectCard";
 import FilterButtons from "./FilterButtons";
 import { isDarkModeStore } from "./Navbar";
-import { projects } from "../data/projects";
+import { Project } from "@/data/interfaces";
+let projects = require("../data/projects.json");
 
 const Portfolio = () => {
   const isDarkMode = useSelector(
@@ -42,8 +43,8 @@ const Portfolio = () => {
       <div className={"filterButtonWrapper"}>
         <FilterButtons setFilter={handleFilter} isDarkMode={isDarkMode} />
       </div>
-      {projects()
-        .filter((project) => {
+      {projects
+        .filter((project: Project) => {
           return filter === "all"
             ? project
             : filter === "javascript"
@@ -56,7 +57,7 @@ const Portfolio = () => {
             ? project.filter === "html"
             : "";
         })
-        .map((project, index) => (
+        .map((project: Project, index: number) => (
           <div key={index} className={"projectCardWrapper"}>
             <ProjectCard
               filter={["card", "filter", project.filter].join(" ")}

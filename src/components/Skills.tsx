@@ -1,3 +1,4 @@
+import { Skill } from "@/data/interfaces";
 import { useSelector } from "react-redux";
 import { isDarkModeStore } from "./Navbar";
 let skills = require("../data/skills.json");
@@ -80,7 +81,7 @@ const Skills = () => {
               Development
             </span>
             <ul className="chart--horiz">
-              {skills.development.map((skill: any) => {
+              {skills.development.map((skill: Skill) => {
                 return (
                   <li
                     key={skill.id}
@@ -98,7 +99,7 @@ const Skills = () => {
             <span className={isDarkMode ? "chart__titleDark" : "chart__title"}>
               Collaboration
             </span>
-            {skills.collaboration.map((skill: any) => {
+            {skills.collaboration.map((skill: Skill) => {
               return (
                 <li
                   key={skill.id}
@@ -116,7 +117,7 @@ const Skills = () => {
               Design
             </span>
             <ul className="chart--horiz">
-              {skills.design.map((skill: any) => {
+              {skills.design.map((skill: Skill) => {
                 return (
                   <li
                     key={skill.id}
