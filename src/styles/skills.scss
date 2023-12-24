@@ -210,7 +210,7 @@ $chartBarGap: 10px;
   height: $chartBarHeight;
   margin-bottom: $chartBarGap;
 
-  background: linear-gradient(to left, #91c9ff, #195190ff);
+  background: linear-gradient(to left, #195190ff, #a2a2a1ff);
   border-top-right-radius: $border-rad;
   border-bottom-right-radius: $border-rad;
   opacity: 0;
@@ -231,6 +231,10 @@ $chartBarGap: 10px;
 .chart__label {
   padding-left: 10px;
   line-height: 30px;
+  color: black;
+}
+
+.chart__labelDark {
   color: white;
 }
 

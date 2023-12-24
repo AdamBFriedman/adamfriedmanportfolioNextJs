@@ -104,7 +104,15 @@ const Skills = () => {
                           }
                           style={{ width: skill.percentage }}
                         >
-                          <span className="chart__label">{skill.name}</span>
+                          <span
+                            className={
+                              isDarkMode
+                                ? "chart__label chart__labelDark"
+                                : "chart__label"
+                            }
+                          >
+                            {skill.name}
+                          </span>
                         </li>
                       );
                     }
