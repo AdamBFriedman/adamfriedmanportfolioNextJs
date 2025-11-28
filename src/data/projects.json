@@ -30,9 +30,9 @@
     "id": 4,
     "imageType": ".png",
     "filter": "javascript",
-    "title": "28 Memory Game",
+    "title": "Mario Memory Game",
     "imageID": "25",
-    "href": "https://28memorygame.netlify.app/",
+    "href": "https://mariomemorygame.netlify.app/",
     "hoverImage": "mario.gif"
   },
   {
