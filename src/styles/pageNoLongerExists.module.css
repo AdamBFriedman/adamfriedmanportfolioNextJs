@@ -1,0 +1,138 @@
+/* --- Keyframes --- */
+@keyframes neonPulse {
+  0%,
+  100% {
+    text-shadow: 0 0 7px #fff, 0 0 10px #00e6e6, 0 0 21px #00ffff;
+  } /* Adjusted neon colors */
+  50% {
+    text-shadow: 0 0 10px #fff, 0 0 15px #00e6e6, 0 0 30px #00ffff,
+      0 0 45px #00e6e6;
+  }
+}
+
+@keyframes scrollGrid {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100%;
+  }
+}
+
+/* --- Main Container --- */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Vertical centering */
+  min-height: 100vh;
+  text-align: center; /* Ensure global text alignment */
+  padding: 30px;
+
+  /* Deep & Focused Gradient Background */
+  background: linear-gradient(
+    135deg,
+    #0f0f2d 0%,
+    #2a0a3d 30%,
+    #0d0d1a 70%,
+    #0a2d3a 100%
+  );
+  position: relative;
+  overflow: hidden;
+
+  color: #e0e0f2; /* Soft white/light gray text */
+  font-family: 'Open Sans', sans-serif; /* More modern font */
+  letter-spacing: 1px; /* Slightly reduced letter spacing for readability */
+  text-transform: uppercase;
+}
+
+/* --- Grid Overlay (Subtle) --- */
+.gridOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 98%,
+      rgba(255, 255, 255, 0.05) 98%
+    ),
+    /* Fainter grid */
+      linear-gradient(
+        to right,
+        transparent 98%,
+        rgba(255, 255, 255, 0.05) 98%
+      );
+  background-size: 60px 60px; /* Larger grid cells */
+  opacity: 0.1; /* Very subtle */
+  pointer-events: none;
+  animation: scrollGrid 120s linear infinite; /* Slower animation */
+  z-index: 1;
+}
+
+/* --- Content Wrapper (Ensure all text is centered) --- */
+.contentWrapper {
+  z-index: 2;
+  position: relative;
+  text-align: center; /* Explicitly ensure all inner text aligns center */
+  max-width: 900px; /* Constrain width for better centering of lines */
+  padding: 20px;
+}
+
+/* --- Error Code (404) --- */
+.errorCode {
+  font-size: 16vw; /* Slightly smaller to fit better */
+  font-weight: 900;
+  margin: 0;
+  color: #00ffff; /* Electric Cyan */
+
+  text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff, 0 0 60px #00ffff,
+    0 0 100px rgba(0, 255, 255, 0.5); /* Stronger, more focused glow */
+  animation: neonPulse 3s ease-in-out infinite alternate; /* Slightly different animation */
+  line-height: 1; /* Ensure no extra space above/below 404 */
+}
+
+/* --- Heading --- */
+.heading {
+  font-size: 2.5em; /* Adjusted size */
+  margin-top: 20px; /* More space below 404 */
+  margin-bottom: 15px;
+  color: #ffffff; /* White heading */
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.5),
+    0 0 15px rgba(120, 0, 255, 0.3); /* Subtle blue/purple glow */
+  letter-spacing: 3px; /* More prominent letter spacing */
+}
+
+/* --- Message Text --- */
+.message {
+  font-size: 1.1em;
+  margin-bottom: 40px;
+  max-width: 700px; /* Constrain width for better line breaks */
+  line-height: 1.6;
+  color: #a9a9f2; /* Soft blue text */
+  text-shadow: none; /* Removed old text shadow for clarity */
+}
+
+/* --- Return Link Button --- */
+.returnLink {
+  padding: 14px 30px;
+  background-color: transparent;
+  border: 2px solid #00ffff; /* Electric Cyan border */
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  letter-spacing: 1.5px;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Subtle cyan glow */
+  border-radius: 5px; /* Slightly rounded corners */
+}
+
+.returnLink:hover {
+  background-color: #00ffff; /* Fill with cyan on hover */
+  color: #1c1c1c; /* Dark text on hover */
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+  transform: translateY(-2px); /* Slight lift */
+}
