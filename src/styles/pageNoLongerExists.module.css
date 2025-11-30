@@ -108,10 +108,10 @@
 .message {
   font-size: 1.1em;
   margin-bottom: 40px;
-  max-width: 700px; /* Constrain width for better line breaks */
+  max-width: 900px;
   line-height: 1.6;
-  color: #a9a9f2; /* Soft blue text */
-  text-shadow: none; /* Removed old text shadow for clarity */
+  color: #a9a9f2;
+  text-shadow: none;
 }
 
 /* --- Return Link Button --- */
